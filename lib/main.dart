@@ -92,7 +92,8 @@ class _AppBarViewState extends State<AppBarView> with SingleTickerProviderStateM
     super.initState();
 
     //------------------------------------------------------
-    // _animation.values go from 0 to 250.
+    // Animation is for .5 seconds, tween range is between
+    // 0 and 250, linear curve animation.
     //------------------------------------------------------
     _animationController =
         AnimationController(vsync: this, duration: Duration(milliseconds: 500));
@@ -175,8 +176,6 @@ class _AppBarViewState extends State<AppBarView> with SingleTickerProviderStateM
 }
 
 class ClipAppBar extends CustomClipper<Path> {
-  // Good info here: https://iirokrankka.com/2017/09/12/from-design-to-flutter-movie-details-page
-  // acknowledge in post
 
   @override
   Path getClip(Size size) {
